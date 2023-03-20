@@ -6,15 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "playwright-local": "playwright test --config=./playwright.config.ts --workers=1",
+    "playwright-lambdatest": "playwright test --config=./e2e/playwright-lambdatest.config.ts --workers=1"
   },
   "dependencies": {
+    "benchmark": "^2.1.4",
     "comlink": "^4.3.1",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.31.2",
+    "@types/benchmark": "^2.1.2",
     "@types/node": "18.11.7",
     "@types/react": "^18.0.24",
     "@types/react-dom": "18.0.8",
